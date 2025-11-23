@@ -1,0 +1,311 @@
+[ {
+  "uid" : "42fd5bcc5d8ae7ff",
+  "name" : "test_HomePage_redirect_Solution_FrontendTesting",
+  "time" : {
+    "start" : 1762949100347,
+    "stop" : 1762949128251,
+    "duration" : 27904
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e57d408a201ac450",
+  "name" : "test_Dashboard_SETTINGS_Profile",
+  "time" : {
+    "start" : 1762948515826,
+    "stop" : 1762948542559,
+    "duration" : 26733
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8e790c4148ef0010",
+  "name" : "test_Dashboard_TESTING_CreateTests",
+  "time" : {
+    "start" : 1762948589981,
+    "stop" : 1762948708867,
+    "duration" : 118886
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2931a8c6c1821a65",
+  "name" : "test_User_Registration_Success",
+  "time" : {
+    "start" : 1762949302034,
+    "stop" : 1762949328732,
+    "duration" : 26698
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "49550815a58756af",
+  "name" : "test_Dashboard_SETTINGS_PlanBilling",
+  "time" : {
+    "start" : 1762948485925,
+    "stop" : 1762948515819,
+    "duration" : 29894
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aef3c60adbba3ac0",
+  "name" : "test_User_Registration_Success",
+  "time" : {
+    "start" : 1762949239768,
+    "stop" : 1762949273757,
+    "duration" : 33989
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8ae1999b26f1cb3c",
+  "name" : "test_HomePage_redirect_Docs",
+  "time" : {
+    "start" : 1762948962120,
+    "stop" : 1762948993872,
+    "duration" : 31752
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6d9e931e774d56d",
+  "name" : "test_User_Login_Failure_IncorrestAccount",
+  "time" : {
+    "start" : 1762949171783,
+    "stop" : 1762949191210,
+    "duration" : 19427
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a8b577efa30c3bfe",
+  "name" : "test_HomePage_redirect_Pricing",
+  "time" : {
+    "start" : 1762948993879,
+    "stop" : 1762949024574,
+    "duration" : 30695
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "72aa14be4a58bc8b",
+  "name" : "test_User_Registration_Success",
+  "time" : {
+    "start" : 1762949273762,
+    "stop" : 1762949302029,
+    "duration" : 28267
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "925c8b2b7f7cb378",
+  "name" : "test_Dashboard_TESTING_TestLists_CreatList",
+  "time" : {
+    "start" : 1762948806678,
+    "stop" : 1762948845355,
+    "duration" : 38677
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7032ff15c736d9d",
+  "name" : "test_Dashboard_SETTINGS_APIKeys",
+  "time" : {
+    "start" : 1762948440941,
+    "stop" : 1762948485919,
+    "duration" : 44978
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b727f3b29ac767b3",
+  "name" : "test_User_Login_Failure_IncorrestAccount",
+  "time" : {
+    "start" : 1762949191217,
+    "stop" : 1762949209892,
+    "duration" : 18675
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e1fac33b0f1dde1b",
+  "name" : "test_HomePage_redirect_ContactUs",
+  "time" : {
+    "start" : 1762948932558,
+    "stop" : 1762948962115,
+    "duration" : 29557
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f7acf471a59f4fc8",
+  "name" : "test_HomePage_redirect_Solution_MCPServer",
+  "time" : {
+    "start" : 1762949128259,
+    "stop" : 1762949171774,
+    "duration" : 43515
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "50806756a82d27d2",
+  "name" : "test_Dashboard_TESTING_Monitoring",
+  "time" : {
+    "start" : 1762948708874,
+    "stop" : 1762948737524,
+    "duration" : 28650
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9852e0020020b3cd",
+  "name" : "test_Dashboard_PersonalCenter_Profile",
+  "time" : {
+    "start" : 1762948372409,
+    "stop" : 1762948406783,
+    "duration" : 34374
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aa6fb4a961b68424",
+  "name" : "test_Dashboard_TESTING_AllTests",
+  "time" : {
+    "start" : 1762948542564,
+    "stop" : 1762948589974,
+    "duration" : 47410
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "702f75592baf143e",
+  "name" : "test_Dashboard_OVERVIEW_MCPTests",
+  "time" : {
+    "start" : 1762948297672,
+    "stop" : 1762948331094,
+    "duration" : 33422
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "abe2c1f67ec6d154",
+  "name" : "test_User_Registration_Success",
+  "time" : {
+    "start" : 1762949328738,
+    "stop" : 1762949359899,
+    "duration" : 31161
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a5c69dceb576caeb",
+  "name" : "test_HomePage_redirect_Solution_DataTesting",
+  "time" : {
+    "start" : 1762949074118,
+    "stop" : 1762949100342,
+    "duration" : 26224
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "86baceac9ee60602",
+  "name" : "test_Dashboard_PersonalCenter_SignOut",
+  "time" : {
+    "start" : 1762948406792,
+    "stop" : 1762948440935,
+    "duration" : 34143
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6f4147dd58b4f75",
+  "name" : "test_User_Login_Success",
+  "time" : {
+    "start" : 1762949209898,
+    "stop" : 1762949239761,
+    "duration" : 29863
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "85884f28ea589ab8",
+  "name" : "test_Dashboard_TESTING_TestLists",
+  "time" : {
+    "start" : 1762948737537,
+    "stop" : 1762948806667,
+    "duration" : 69130
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a6d1f2314a8a318",
+  "name" : "test_Dashboard_PersonalCenter_Billing",
+  "time" : {
+    "start" : 1762948331354,
+    "stop" : 1762948372402,
+    "duration" : 41048
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "919dee867d54cc7b",
+  "name" : "test_HomePage_redirect_Solution_BackendTesting",
+  "time" : {
+    "start" : 1762949050836,
+    "stop" : 1762949074112,
+    "duration" : 23276
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f053251fd1b0dc0f",
+  "name" : "test_HomePage_info",
+  "time" : {
+    "start" : 1762948845364,
+    "stop" : 1762948870323,
+    "duration" : 24959
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f49fd470cc314206",
+  "name" : "test_HomePage_redirect_Community",
+  "time" : {
+    "start" : 1762948897511,
+    "stop" : 1762948932551,
+    "duration" : 35040
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b208b004685913ed",
+  "name" : "test_Dashboard_OVERVIEW_Home",
+  "time" : {
+    "start" : 1762948268941,
+    "stop" : 1762948297663,
+    "duration" : 28722
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "276dd84a3e88a48e",
+  "name" : "test_HomePage_redirect_Blog",
+  "time" : {
+    "start" : 1762948870330,
+    "stop" : 1762948897503,
+    "duration" : 27173
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e4008478f82211ea",
+  "name" : "test_HomePage_redirect_Solution_AIAgent",
+  "time" : {
+    "start" : 1762949024580,
+    "stop" : 1762949050830,
+    "duration" : 26250
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

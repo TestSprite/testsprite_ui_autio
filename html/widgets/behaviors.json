@@ -1,0 +1,114 @@
+{
+  "total" : 31,
+  "items" : [ {
+    "uid" : "1962542316cc43a1c84ee19a5e05302e",
+    "name" : "点击OVERVIEW_Home跳转成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "9eaeba217a2311249b9711af7c83d175",
+    "name" : "点击OVERVIEW_MCP Tests跳转成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "c72067129939a35c51e51db459687833",
+    "name" : "个人中心-点击Billing跳转成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "4feee8ac9488e5ef46970b0c750c0844",
+    "name" : "个人中心-点击Profile跳转成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "8a8feb20ec66c1b79aa7c2f392d17eab",
+    "name" : "个人中心-点击SignOut退出登录成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "ee398206d661936312105c7f83694ebd",
+    "name" : "验证SETTINGS-API Keys新增功能",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "d41fac0e23cc173e52b0cf37ed3257d2",
+    "name" : "验证SETTINGS-Plan & Billing页面文案",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "e8b7f3b841cb85ff0d5d4b8c12b5c947",
+    "name" : "验证SETTINGS-Profile页面文案",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "f75a878bfabb3b869bbfce189782526c",
+    "name" : "选择测试用例加入测试套件",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
+    "uid" : "7e81617f6e0b9b7a6d7cbf7546988c6b",
+    "name" : "创建测试成功",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}
