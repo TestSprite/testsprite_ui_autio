@@ -1,0 +1,75 @@
+name: Nightly UI Test Suite
+
+on:
+  schedule:
+    # 多个时间格式选择（北京时间 24:00）
+    - cron: '0 16 * * *'      # UTC 16:00 = 北京时间 24:00
+    
+  workflow_dispatch:          # 手动触发
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  testsprite_ui_auto:
+    runs-on: ubuntu-latest
+    env:
+      TZ: 'Asia/Shanghai'  # 设置时区
+    
+    strategy:
+      matrix:
+        python-version: [3.8]
+        shm-size: [2gb]
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-html allure-pytest
+        pip install selenium webdriver-manager
+        pip install playwright asyncio
+        pip install anyio
+        pip install pytest-asyncio
+        pip install pytest-tornasync
+        pip install pytest-trio pytest-xdist
+        # 如果有特定的测试依赖
+        pip install requests beautifulsoup4
+        playwright install      
+        # 增加系统资源
+        sudo apt-get update
+        sudo apt-get install -y libgbm-dev libnss3
+        # 安装allure
+        sudo apt update
+        sudo apt install allure
+               
+    - name: Run UI test cases
+      run: |
+        echo "开始运行 UI 测试..."
+        xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" python pytest_runcase_ui.py
+        echo "测试完成"
+
+    #API Key（以 lin_api_开头）：直接使用 Authorization: YOUR_API_KEY
+    #Bearer Token（JWT格式）：使用 Authorization: Bearer YOUR_TOKEN
+    - name: Create Linear Issue on Failure
+      if: failure() && env.FAILED_TESTS > 0 && github.event_name != 'pull_request'
+      run: |
+        echo "检测到测试失败，开始创建Linear Issue..."
+        echo "失败测试数量: $FAILED_TESTS"
+
+        # 使用Python脚本处理测试结果并创建Issue
+        python .github/scripts/create_linear_issue.py
+      env:
+        # 确保在CI环境中使用无头模式
+        HEADLESS: true
+        PLAYWRIGHT_HEADLESS: 1
+        LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
+        LINEAR_TEAM_ID: ${{ secrets.LINEAR_TEAM_ID }}
