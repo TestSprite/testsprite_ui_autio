@@ -60,13 +60,23 @@ jobs:
     #API Key（以 lin_api_开头）：直接使用 Authorization: YOUR_API_KEY
     #Bearer Token（JWT格式）：使用 Authorization: Bearer YOUR_TOKEN
     - name: Create Linear Issue on Failure
-      if: failure() && env.FAILED_TESTS > 0 && github.event_name != 'pull_request'
       run: |
-        echo "检测到测试失败，开始创建Linear Issue..."
-        echo "失败测试数量: $FAILED_TESTS"
+        # 统计失败测试数量
+        if [ -d "results" ]; then
+          FAILED_COUNT=$(find results -name "*.json" -exec grep -l '"status":"failed"' {} \; 2>/dev/null | wc -l || echo "0")
+        else
+          FAILED_COUNT=0
+        fi
 
-        # 使用Python脚本处理测试结果并创建Issue
-        python .github/scripts/create_linear_issue.py
+        echo "失败测试数量: $FAILED_COUNT"
+
+        # 设置输出变量
+        echo "exit_code=$TEST_EXIT_CODE" >> $GITHUB_OUTPUT
+        echo "failed_count=$FAILED_COUNT" >> $GITHUB_OUTPUT
+
+        # 即使测试失败也返回成功，让后续步骤执行
+        exit 0
+      continue-on-error: true
       env:
         # 确保在CI环境中使用无头模式
         HEADLESS: true
