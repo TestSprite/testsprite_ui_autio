@@ -33,9 +33,11 @@ async def test_Dashboard_PersonalCenter_Billing():
             await page.click("xpath=/html/body/ul/a[2]")
             await page.wait_for_timeout(3000)
             #跳转成功，验证跳转后页面文案
-            loc=await page.locator('xpath=/html/body/div[1]/div[2]/div[2]/div/div/div/div[2]/div[1]/div[1]/div[2]/button').inner_text()
+            # 跳转成功，验证跳转后页面文案
+            loc = await page.locator(
+                'xpath=/html/body/div[1]/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div[1]/div[2]/div/div[1]/div/span').inner_text()
             await page.wait_for_timeout(3000)
-            assert loc == 'Upgrade'
+            assert loc == '1st-Month Discount'
         finally:
             await browser.close()
     

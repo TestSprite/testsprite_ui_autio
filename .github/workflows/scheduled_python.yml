@@ -63,7 +63,7 @@ jobs:
       run: |
         # 统计失败测试数量
         if [ -d "results" ]; then
-          FAILED_COUNT=$(find results -name "*.json" -exec grep -l '"status":"failed"' {} \; 2>/dev/null | wc -l || echo "0")
+          FAILED_COUNT=$(find results -name "*.json" -exec grep -l '"status":"failed"')
         else
           FAILED_COUNT=0
         fi

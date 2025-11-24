@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="555ddb4f-c5aa-4ba7-8e39-556f6e41f3c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/scheduled_python.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/scheduled_python.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/test_Dashboard_PersonalCenter_Billing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_Dashboard_PersonalCenter_Billing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testcase/test_Dashboard_SETTINGS_PlanBilling.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_Dashboard_SETTINGS_PlanBilling.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,80 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager" selected="Python tests.pytest in test_Dashboard_PersonalCenter_Billing.py">
+    <configuration name="pytest for test_Dashboard_PersonalCenter_Billing.test_Dashboard_PersonalCenter_Billing" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="testsprite_ui_autio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_Dashboard_PersonalCenter_Billing.test_Dashboard_PersonalCenter_Billing&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_Dashboard_SETTINGS_PlanBilling.test_Dashboard_SETTINGS_PlanBilling" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="testsprite_ui_autio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_Dashboard_SETTINGS_PlanBilling.test_Dashboard_SETTINGS_PlanBilling&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_Dashboard_PersonalCenter_Billing.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="testsprite_ui_autio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/test_Dashboard_PersonalCenter_Billing.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_Dashboard_SETTINGS_PlanBilling.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="testsprite_ui_autio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testcase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testcase/test_Dashboard_SETTINGS_PlanBilling.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in test_Dashboard_PersonalCenter_Billing.py" />
+        <item itemvalue="Python tests.pytest for test_Dashboard_PersonalCenter_Billing.test_Dashboard_PersonalCenter_Billing" />
+        <item itemvalue="Python tests.pytest in test_Dashboard_SETTINGS_PlanBilling.py" />
+        <item itemvalue="Python tests.pytest for test_Dashboard_SETTINGS_PlanBilling.test_Dashboard_SETTINGS_PlanBilling" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

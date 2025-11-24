@@ -32,7 +32,7 @@ async def test_Dashboard_SETTINGS_PlanBilling():
             #跳转成功，验证跳转后页面文案
             loc=await page.locator('xpath=/html/body/div[1]/div[2]/div[2]/div/div/div/div/div[1]/div[1]/div[1]/div[2]/div/div[1]/div/span').inner_text()
             await page.wait_for_timeout(3000)
-            assert loc == 'Try for Free'
+            assert loc == '1st-Month Discount'
         finally:
             await browser.close()
     
