@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="555ddb4f-c5aa-4ba7-8e39-556f6e41f3c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/scheduled_python.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/scheduled_python.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/test_Dashboard_PersonalCenter_Billing.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_Dashboard_PersonalCenter_Billing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testcase/test_Dashboard_SETTINGS_PlanBilling.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test_Dashboard_SETTINGS_PlanBilling.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
