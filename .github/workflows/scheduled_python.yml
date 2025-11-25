@@ -63,28 +63,55 @@ jobs:
     - name: Run UI test cases
       run: |
         echo "开始运行 UI 测试..."
-        xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" python pytest_runcase_ui.py
-        echo "测试完成"
+        # 运行测试并生成JSON报告，同时捕获退出码
+        xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24"  pytest testcase/ --json-report --json-report-file=results/report.json -v || echo "测试执行完成，退出码: $?"
+        echo "TEST_EXIT_CODE=$?" >> $GITHUB_ENV
 
-    #API Key（以 lin_api_开头）：直接使用 Authorization: YOUR_API_KEY
-    #Bearer Token（JWT格式）：使用 Authorization: Bearer YOUR_TOKEN
-    - name: Create Linear Issue on Failure
+    - name: Debug - Check report content
+      if: always()
       run: |
-        # 统计失败测试数量 - 修正版
-        if [ -d "results" ]; then
-          # 使用jq解析JSON报告，统计实际失败数量
-          FAILED_COUNT=$(find results -name "*.json" -exec cat {} \; | grep -o '"status": "failed"' | wc -l || echo "0")
+        echo "=== 调试信息 ==="
+        echo "pytest退出码: ${{ env.TEST_EXIT_CODE }}"
+        if [ -f "results/report.json" ]; then
+          echo "报告文件存在，内容预览:"
+          head -50 results/report.json
         else
-          FAILED_COUNT=0
+          echo "未找到results/report.json"
+          echo "results目录内容:"
+          ls -la results/ 2>/dev/null || echo "results目录不存在"
         fi
-
         echo "失败测试数量: $FAILED_COUNT"
+        echo "pytest退出码: ${{ env.TEST_EXIT_CODE }}"
 
         # 设置输出变量
-        echo "exit_code=$TEST_EXIT_CODE" >> $GITHUB_OUTPUT
         echo "failed_count=$FAILED_COUNT" >> $GITHUB_OUTPUT
 
-      continue-on-error: true
+        # 如果有失败测试，创建Linear issue
+        if [ "$FAILED_COUNT" -gt 0 ]; then
+          echo "检测到 $FAILED_COUNT 个失败测试，开始创建Linear issue..."
+
+          # 创建Linear issue的API调用
+          RESPONSE=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -H "Authorization: $LINEAR_API_KEY" \
+            -d '{
+              "query": "mutation IssueCreate { issueCreate(input: { title: \"UI自动化测试失败: '"$FAILED_COUNT"'个用例失败\", description: \"GitHub Actions测试运行失败报告\\n\\n**失败详情:**\\n- 失败用例数量: '"$FAILED_COUNT"'\\n- 工作流: '"${{ github.workflow }}"'\\n- 提交: '"${{ github.sha }}"'\\n- 分支: '"${{ github.ref }}"'\\n- 运行时间: '"$(date)"'\\n\\n**相关链接:**\\n- 工作流运行: '"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"'\\n- 提交详情: '"${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}"'\\n\", teamId: \"'"$LINEAR_TEAM_ID"'\", labelIds: [\"\"], priority: 2 }) { success issue { id title number url } } }"
+            }' \
+            https://api.linear.app/graphql 2>/dev/null || echo "API请求失败")
+
+          if echo "$RESPONSE" | grep -q "success"; then
+            echo "✅ Linear issue创建成功"
+            ISSUE_URL=$(echo "$RESPONSE" | jq -r '.data.issueCreate.issue.url // empty' 2>/dev/null || echo "")
+            if [ -n "$ISSUE_URL" ]; then
+              echo "Issue链接: $ISSUE_URL"
+            fi
+          else
+            echo "❌ Linear issue创建失败"
+            echo "响应: $RESPONSE"
+          fi
+        else
+          echo "✅ 所有测试通过，无需创建Linear issue"
+        fi
       env:
         # 确保在CI环境中使用无头模式
         HEADLESS: true
