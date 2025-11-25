@@ -49,7 +49,7 @@ jobs:
         sudo apt-get install -y libgbm-dev libnss3
         #安装jq工具
         sudo apt-get install -y jq
-        
+
     - name: Install Allure Commandline
       run: |
         # 安装Allure命令行工具
@@ -73,7 +73,7 @@ jobs:
         # 统计失败测试数量 - 修正版
         if [ -d "results" ]; then
           # 使用jq解析JSON报告，统计实际失败数量
-          FAILED_COUNT=$(find results -name "*.json" -exec grep -o '"status": "failed"' {} \; | wc -l || echo "0")
+          FAILED_COUNT=$(find results -name "*.json" -exec cat {} \; | grep -o '"status": "failed"' | wc -l || echo "0")
         else
           FAILED_COUNT=0
         fi
