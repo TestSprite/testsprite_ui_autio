@@ -47,11 +47,18 @@ jobs:
         # 增加系统资源
         sudo apt-get update
         sudo apt-get install -y libgbm-dev libnss3
-        # 安装allure
-        sudo apt update
-        sudo apt install allure
         #安装jq工具
         sudo apt-get install -y jq
+        
+    - name: Install Allure Commandline
+      run: |
+        # 安装Allure命令行工具
+        sudo apt-get update
+        wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
+        tar -zxvf allure-2.27.0.tgz
+        sudo mv allure-2.27.0 /opt/allure
+        sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+        allure --version
                
     - name: Run UI test cases
       run: |
