@@ -50,6 +50,8 @@ jobs:
         # 安装allure
         sudo apt update
         sudo apt install allure
+        #安装jq工具
+        sudo apt-get install -y jq
                
     - name: Run UI test cases
       run: |
@@ -61,9 +63,10 @@ jobs:
     #Bearer Token（JWT格式）：使用 Authorization: Bearer YOUR_TOKEN
     - name: Create Linear Issue on Failure
       run: |
-        # 统计失败测试数量
+        # 统计失败测试数量 - 修正版
         if [ -d "results" ]; then
-          FAILED_COUNT=$(find results -name "*.json" -exec grep -l '"status": "failed"' {} \; 2>/dev/null | wc -l || echo "0")
+          # 使用jq解析JSON报告，统计实际失败数量
+          FAILED_COUNT=$(find results -name "*.json" -exec grep -o '"status": "failed"' {} \; | wc -l || echo "0")
         else
           FAILED_COUNT=0
         fi
@@ -74,8 +77,6 @@ jobs:
         echo "exit_code=$TEST_EXIT_CODE" >> $GITHUB_OUTPUT
         echo "failed_count=$FAILED_COUNT" >> $GITHUB_OUTPUT
 
-        # 即使测试失败也返回成功，让后续步骤执行
-        exit 0
       continue-on-error: true
       env:
         # 确保在CI环境中使用无头模式
