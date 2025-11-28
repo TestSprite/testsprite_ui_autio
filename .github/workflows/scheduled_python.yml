@@ -64,7 +64,7 @@ jobs:
       run: |
         echo "开始运行 UI 测试..."
         # 运行测试并生成JSON报告，同时捕获退出码
-        xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24"  pytest testcase/ --json-report --json-report-file=results/report.json -v || echo "测试执行完成，退出码: $?"
+        xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24"  pytest pytest_runcase_ui.py || echo "测试执行完成"
         echo "TEST_EXIT_CODE=$?" >> $GITHUB_ENV
 
     - name: Debug - Check report content
@@ -72,7 +72,7 @@ jobs:
       run: |
         echo "=== 调试信息 ==="
         echo "pytest退出码: ${{ env.TEST_EXIT_CODE }}"
-        if [ -f "results/report.json" ]; then
+        if [ -f "./results/report.json" ]; then
           echo "报告文件存在，内容预览:"
           head -50 results/report.json
         else
